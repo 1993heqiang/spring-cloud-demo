@@ -1,0 +1,14 @@
+spring:
+  config:
+    import: optional:configserver:http://localhost:8888
+
+management:
+  endpoint:
+    env:
+      post:
+        enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
