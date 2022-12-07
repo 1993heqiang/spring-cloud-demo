@@ -2,7 +2,7 @@ spring:
   application:
     name: foo
   profiles:
-    active: dev,mysql
+    active: dev
 
 #encrypt:
 #  failOnError: false

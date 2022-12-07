@@ -5,7 +5,6 @@ server:
 management:
   endpoints:
     web:
-      base-path: "/admin"
       exposure:
         include: "*"
   endpoint:
@@ -30,10 +29,7 @@ spring:
       server:
         accept-empty: true
         git:
-          uri: https://github.com/spring-cloud-samples/config-repo
-          basedir: target/config
-          default-label: main
-
+          uri: file:/Users/1993heqiang/workspace/demos/spring-demos/spring-cloud-demo/spring-cloud-config-server-demo/src/main/resources/local-git-repo
 
 
 ---

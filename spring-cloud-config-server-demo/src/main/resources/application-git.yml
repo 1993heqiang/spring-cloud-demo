@@ -6,6 +6,22 @@ spring:
         git:
           uri: https://github.com/spring-cloud-samples/config-repo
           basedir: target/config
+          search-paths:
+            - subdir
           skip-ssl-validation: true
           timeout: 4
           default-label: main
+          clone-on-start: true
+          force-pull: true
+          delete-untracked-branches: true
+          refresh-rate: 0
+          repos:
+            simple: https://github.com/simple/config-repo
+            special:
+              pattern:
+                - special*/dev*
+                - '*special*/dev*'
+              cloneOnStart: false
+              uri: https://github.com/special/config-repo
+
+
