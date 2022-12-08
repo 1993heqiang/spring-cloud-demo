@@ -12,16 +12,9 @@ management:
       post:
         enabled: true
 
-#logging:
-#  level:
-#    com.netflix.discovery: 'OFF'
-#    org.springframework.cloud: 'DEBUG'
-    
-#eureka:
-#  instance:
-#    leaseRenewalIntervalInSeconds: 10
-#    statusPageUrlPath: /admin/info
-#    healthCheckUrlPath: /admin/health
+logging:
+  level:
+    org.springframework.cloud: 'DEBUG'
 
 spring:
   cloud:
@@ -29,8 +22,7 @@ spring:
       server:
         accept-empty: true
         git:
-          uri: file:/Users/1993heqiang/workspace/demos/spring-demos/spring-cloud-demo/spring-cloud-config-server-demo/src/main/resources/local-git-repo
-
+          uri: file:/Users/1993heqiang/
 
 ---
 spring:
@@ -38,12 +30,4 @@ spring:
     activate:
       on-profile:
         - cloud
-#eureka:
-#  password: password
-#  instance:
-#    hostname: ${vcap.application.uris[0]}
-#    nonSecurePort: 80
-#  client:
-#    serviceUrl:
-#      defaultZone: ${vcap.services.${PREFIX:}eureka.credentials.uri:http://user:${eureka.password:}@${PREFIX:}eureka.${application.domain:cfapps.io}}/eureka/
 
